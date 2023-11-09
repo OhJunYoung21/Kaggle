@@ -13,6 +13,8 @@ features = ["Pclass", "Sex", "SibSp", "Parch"]
 X = pd.get_dummies(train_data[features])
 X_test = pd.get_dummies(test_data[features])
 
+//model을 선언해준다.
+
 model = RandomForestClassifier(n_estimators=100, max_depth=5, random_state=1)
 model.fit(X, y)
 predictions = model.predict(X_test)
@@ -23,4 +25,6 @@ output.to_csv('submission.csv', index=False)
 print("Your submission was successfully saved!")
 ~~~
 
+RandomForest의 매개변수들
+n_estimators,max_depth,random_state들을 알아보자.
 
