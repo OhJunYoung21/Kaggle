@@ -27,4 +27,14 @@ print("Your submission was successfully saved!")
 
 RandomForest의 매개변수들
 n_estimators,max_depth,random_state들을 알아보자.
+~~~
+model = RandomForestClassifier(n_estimators=100, max_depth=5, random_state=1)
+~~~
+
+n_estimator는 결정트리의 개수를, max_depth는 각 트리의 깊이를 나타낸다. max_depth가 너무 깊게 설정되면 overfitting의 위험이 있으니 주의해야 한다.
+
+### Overfitting이란?
+
+모델이 특정 데이터만 지나치게 수행을 잘 해내는 경우를 말한다. 비유하자면 한 학생이 수능공부를 한다. 목표는 11.16일에 수능을 잘 치는 것이다. 그러나, 사설 모의고사만 많이 푼 탓에 사설모의고사에 익숙해져버려서 수능을 망하고 말았다. 위 학생을 모델이라고 하면, 위 모델은 사설모의고사에 과적합(Over Fitting)된 것이다.
+
 
